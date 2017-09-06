@@ -3,80 +3,223 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout">
+
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1">
 
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/linearLayout0"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="horizontal"
+                    tools:context=".MapsActivity" >
 
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:orientation="horizontal">
+                    <fragment
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        class="com.google.android.gms.maps.MapFragment" >
+                    </fragment>
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/image_01_4x3_width" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="37, Gyedong-gil, Jongno-gu, Seoul"
-                android:textAppearance="@style/TextAppearance.AppCompat" />
-        </LinearLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_alignParentBottom="true"
-                    android:orientation="horizontal"
-                    android:id="@+id/linearLayout3">
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
 
-                    <android.support.design.widget.TabLayout
+                    <HorizontalScrollView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/colorPrimary">
+                        android:layout_height="match_parent">
 
-                        <android.support.design.widget.TabItem
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:icon="@drawable/button_navigate" />
-
-                        <android.support.design.widget.TabItem
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:icon="@drawable/button_review" />
-
-                        <android.support.design.widget.TabItem
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:icon="@drawable/button_pick" />
-
-                        <android.support.design.widget.TabItem
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:icon="@drawable/button_addphoto" />
+                            <LinearLayout
+                                android:id="@+id/linearLayout1"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
 
 
-                    </android.support.design.widget.TabLayout>
+                                <ImageView
+                                        android:id="@+id/imageView2"
+                                        android:layout_width="175dp"
+                                        android:layout_height="130dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/image_01_4x3_width" />
+
+                                <ImageView
+                                    android:id="@+id/imageView22"
+                                    android:layout_width="175dp"
+                                    android:layout_height="130dp"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/image_05_4x3_width" />
+
+                                <ImageView
+                                    android:id="@+id/imageView222"
+                                    android:layout_width="175dp"
+                                    android:layout_height="130dp"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/image_07_4x3_width" />
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="175dp"
+                                    android:layout_height="130dp"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/image_01_4x3_width" />
+
+                                <ImageView
+                                    android:id="@+id/imageView22"
+                                    android:layout_width="175dp"
+                                    android:layout_height="130dp"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/image_05_4x3_width" />
+
+
+                            </LinearLayout>
+                    </HorizontalScrollView>
                 </LinearLayout>
-    </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="37, Gyedong-gil, Jongno-gu, Seoul"
+                        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/ic_star_border_black_16dp" />
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top|left"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="7dp"
+                            android:text="4.5"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/ic_pin_drop_black_16dp" />
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top|left"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="7dp"
+                            android:text="100m"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton3"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/ic_touch_app_black_16dp" />
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="top|left"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="7dp"
+                            android:text="795"
+                            android:textColor="#777777"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentStart="false"
+                    android:background="#FFFFFF"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/tabButton1"
+                        android:layout_width="94dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/button_navigate" />
+
+                        <ImageButton
+                            android:id="@+id/tabButton2"
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/button_review" />
+
+                        <ImageButton
+                            android:id="@+id/tabButton3"
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/button_pick" />
+
+                        <ImageButton
+                            android:id="@+id/tabButton4"
+                            android:layout_width="94dp"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerInside"
+                            android:background="@android:color/transparent"
+                            app:srcCompat="@drawable/button_addphoto" />
+
+                </LinearLayout>
+
+                <linearLayout></linearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
